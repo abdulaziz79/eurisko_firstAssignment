@@ -25,12 +25,23 @@ const Member = new mongoose.Schema({
     }],
     borrowedBooks: [
       {
-        borrowedBookId: { type: mongoose.Schema.Types.ObjectId, ref: 'Book' }, // Book borrowed by the member.
-        borrowedDate: { type: Date, default: Date.now }, // When the book was borrowed.
-        returnDate: { type: Date }, // When the book should be returned.
+        borrowedBookId: { 
+            type: mongoose.Schema.Types.ObjectId, 
+            ref: 'Book' 
+        },
+        borrowedDate: { 
+            type: Date, 
+            default: Date.now 
+        },
+        returnDate: { 
+            type: Date 
+        },
       },
     ],
-    returnRate: { type: Number, default: 100 }
+    returnRate: { 
+        type: Number, 
+        default: 100 
+    }
 })
 
 export default mongoose.model("Member", Member);

@@ -6,6 +6,8 @@ import cors from "cors"
 import dotenv from "dotenv"
 import { connectDB } from "./config/Mongo.js";
 dotenv.config()
+import router from "./Routes/Book.js";
+import authorRoute from "./Routes/Author.js";
 
 const app=express()
 app.use(express.json());
@@ -29,3 +31,5 @@ app.listen(PORT, (error)=>{
     }
 })
 connectDB()
+app.use('/book', router)
+app.use('/author',authorRoute)
