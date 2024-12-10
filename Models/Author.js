@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const Author = new mongoose.Schema({
     name: { 
-        type: String, 
-        required: true 
+        en:{ type:String, required:true},
+        ar:{ type:String, required:true}
     },
     email: { 
         type: String, 
@@ -11,7 +11,8 @@ const Author = new mongoose.Schema({
         required: true 
     },
     biography: { 
-        type: String 
+        en:{ type:String},
+        ar:{ type:String}    
     },
     profileImageUrl: { 
         type: String 

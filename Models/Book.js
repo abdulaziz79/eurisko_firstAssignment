@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const Book = new mongoose.Schema({
     title:{
-        type:String,
-        required:true
+        en:{ type:String, required:true},
+        ar:{ type:String, required:true}
     },
     isbn: { 
         type: String, unique: true,
@@ -14,7 +14,8 @@ const Book = new mongoose.Schema({
          required: true 
     },
     description: {
-         type: String
+        en: { type: String },
+        ar: { type: String }
          },
     numberOfAvailableCopies: { 
         type: Number, 

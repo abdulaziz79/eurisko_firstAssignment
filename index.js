@@ -8,6 +8,7 @@ import { connectDB } from "./config/Mongo.js";
 dotenv.config()
 import router from "./Routes/Book.js";
 import authorRoute from "./Routes/Author.js";
+import memberRoute from "./Routes/Member.js";
 
 const app=express()
 app.use(express.json());
@@ -33,3 +34,4 @@ app.listen(PORT, (error)=>{
 connectDB()
 app.use('/book', router)
 app.use('/author',authorRoute)
+app.use('/member',memberRoute)
