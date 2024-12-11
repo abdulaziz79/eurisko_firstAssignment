@@ -32,5 +32,37 @@ class MemberController {
               });
         }
     }
+    async deleteMember(req, res){
+        try {
+            const {id} = req.params;
+            const deletedMember = await MemberService.deleteAuthor(id);
+            if(!deletedMember){
+                return res.status(404).json("member not found")
+            }
+            return res.status(200).json("member deleted successfully")
+        } catch (error) {
+            res.status(500).json({error:"failed deleting member",details:error.message})
+        }
+    }
+    async updateMember(req, res){
+        try {
+            const { id } = req.params;
+            const updates = req.body;
+
+            const updatedMember = await MemberService.updateMember(id, updates);
+            if (!updatedMember) {
+                return res.status(404).json({ error: "member not found" });
+              }
+              res.status(200).json({
+                message: "member updated successfully",
+                data: updatedMember,
+              });
+        } catch (error) {
+            res.status(500).json({
+                error: "Failed to update member",
+                details: error.message,
+              });
+        }
+    }
 }
 export default new MemberController()

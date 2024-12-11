@@ -46,6 +46,34 @@ class AuthorService {
 
         }
     }
+    async getAuthorById(id, language){
+        try {
+            
+       
+        const author = await Author.findById(id);
+        if(!author){
+            throw new Error("author not found");
+        }
+            const selectedLanguage = language || "en";
+            const projection = {
+                email: 1,
+                profileImageUrl: 1,
+                birthDate: 1,
+                createdAt: 1,
+                updatedAt: 1,
+                [`name.${selectedLanguage}`]: 1,
+                [`biography.${selectedLanguage}`]: 1,
+            }
+            const authorDetails = await Author.findById(id, projection);
+            if (!authorDetails) {
+                throw new Error("Author not found");
+            }
+            return authorDetails
+        } catch (error) {
+            throw new Error(`Error fetching author by ID: ${error.message}`);
+
+        }
+    }
 }
 
 export default new AuthorService()

@@ -22,6 +22,25 @@ class MemberService{
 
         }
     }
+    async deleteAuthor(id){
+        try {
+            const member = await Member.findByIdAndDelete(id);
+            if(!member){
+                throw new Error("Member not found")
+            }
+            return member
+        } catch (error) {
+            throw new Error(`Error deleting member${error.message}`)
+        }
+    }
+    async updateMember(id, updates){
+        try {
+            const updates = await Member.findByIdAndUpdate(id, {$set:updates}, {new: true})
+            return updates;
+        } catch (error) {
+            throw new Error(`Error updating member: ${error.message}`)
+        }
+    }
 }
 
 export default new MemberService()

@@ -6,7 +6,7 @@ class AuthorController {
             const authorData = req.body;
             const image = req.file?req.file.path :null
             if(!image){
-                return res.status(400).json({ message: "Cover image is required!" });
+                return res.status(400).json({ message: "profile image is required!" });
             }
             const createAuthor = await AuthorService.createAuthor(authorData, image);
             res.status(201).json(createAuthor);
@@ -62,6 +62,22 @@ class AuthorController {
             res.status(500).json({
                 error: "Failed to update author",
                 details: error.message,
+              });
+        }
+    }
+    async getAuthorByIdWeb(req, res){
+        try {
+            const { id } = req.params;
+            const { language } = req.query;
+            const authorDetails = await AuthorService.getAuthorById(id, language)
+            return res.status(200).json({
+                message: "author details fetched successfully",
+                data: authorDetails,
+              });
+        } catch (error) {
+            return res.status(500).json({
+                message: "Failed to fetch author details",
+                error: error.message,
               });
         }
     }
