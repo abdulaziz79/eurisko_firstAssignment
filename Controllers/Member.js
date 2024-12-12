@@ -124,6 +124,35 @@ class MemberController {
           res.status(500).json({ error: error.message });
         }
       }
+      async returnBook(req, res) {
+        try {
+            const { memberId, bookId } = req.body;
+    
+            const { member, book } = await MemberService.returnBook(memberId, bookId);
+    
+            return res.status(200).json({
+                message: "Book returned successfully",
+                data: {
+                    member: {
+                        id: member._id,
+                        name: member.name,
+                        returnRate: member.returnRate,
+                    },
+                    book: {
+                        id: book._id,
+                        title: book.title,
+                        availableCopies: book.numberOfAvailableCopies,
+                    },
+                },
+            });
+        } catch (error) {
+            return res.status(500).json({
+                error: "Failed to return book",
+                details: error.message,
+            });
+        }
+    }
+    
     
 }
 export default new MemberController()

@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "67570e6376c2eef4f210e561"
+  },
+  "name": "abdulaziz",
+  "username": "cherkawi77",
+  "email": "cherkawiabdelaziz@gmail.com",
+  "birthDate": {
+    "$date": "1988-05-01T22:00:00.000Z"
+  },
+  "subscribedBooks": [
+    {
+      "$oid": "6755f6a507076f2c8dfa5298"
+    },
+    {
+      "$oid": "6755b60b3d38597d9981a45b"
+    }
+  ],
+  "borrowedBooks": [],
+  "returnRate": 100,
+  "__v": 9
+},
+{
+  "_id": {
+    "$oid": "67570e9276c2eef4f210e56a"
+  },
+  "name": "abdulaziz",
+  "username": "cherkawi7",
+  "email": "cherkawiabdelazizz@gmail.com",
+  "birthDate": {
+    "$date": "1988-05-01T22:00:00.000Z"
+  },
+  "subscribedBooks": [
+    {
+      "$oid": "6755f6a507076f2c8dfa5298"
+    },
+    {
+      "$oid": "6755b60b3d38597d9981a45b"
+    }
+  ],
+  "borrowedBooks": [],
+  "returnRate": 100,
+  "__v": 6
+},
+{
+  "_id": {
+    "$oid": "675a1f2f107c1b9e1614f1b8"
+  },
+  "name": "abdulaziz",
+  "username": "cherkawi8",
+  "email": "cherkawiabdelazizzz@gmail.com",
+  "birthDate": {
+    "$date": "2012-05-01T21:00:00.000Z"
+  },
+  "subscribedBooks": [
+    {
+      "$oid": "6755f6a507076f2c8dfa5298"
+    },
+    {
+      "$oid": "6755b60b3d38597d9981a45b"
+    }
+  ],
+  "borrowedBooks": [
+    {
+      "borrowedBookId": {
+        "$oid": "6755f6a507076f2c8dfa5298"
+      },
+      "returnDate": {
+        "$date": "2024-12-15T00:00:00.000Z"
+      },
+      "_id": {
+        "$oid": "675a1f2f107c1b9e1614f1b9"
+      },
+      "borrowedDate": {
+        "$date": "2024-12-11T23:24:31.078Z"
+      }
+    }
+  ],
+  "returnRate": 100,
+  "__v": 2
+}]

@@ -135,6 +135,44 @@ class MemberService{
           throw new Error(`Error subscribing/unsubscribing to book: ${error.message}`);
         }
       }
+      async returnBook(memberId, bookId) {
+        try {
+            const member = await Member.findById(memberId);
+            const book = await Book.findById(bookId);
+    
+            if (!member) throw new Error("Member not found");
+            if (!book) throw new Error("Book not found");
+    
+            const borrowedBook = member.borrowedBooks.find(
+                (b) => b.borrowedBookId.toString() === bookId
+            );
+    
+            // if (!borrowedBook) throw new Error("Book not found in member's borrowed list");
+    
+            const returnDate = new Date(borrowedBook.returnDate);
+            const currentDate = new Date();
+    
+            if (currentDate <= returnDate) {
+                member.returnRate = Math.min(member.returnRate + 10, 100); 
+            } else {
+                member.returnRate = Math.max(member.returnRate - 10, 0); 
+            }
+    
+            member.borrowedBooks = member.borrowedBooks.filter(
+                (b) => b.borrowedBookId.toString() !== bookId
+            );
+    
+            book.numberOfAvailableCopies += 1;
+    
+            await member.save();
+            await book.save();
+    
+            return { member, book };
+        } catch (error) {
+            throw new Error(`Error returning book: ${error.message}`);
+        }
+    }
+    
 }
 
 export default new MemberService()

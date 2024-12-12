@@ -1,0 +1,191 @@
+[{
+  "_id": {
+    "$oid": "6755b60b3d38597d9981a45b"
+  },
+  "title": "breakin bad season3",
+  "isbn": "1122332",
+  "genre": "drama action",
+  "numberOfAvailableCopies": 2,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 14,
+  "isOpenToReviews": false,
+  "minAge": 0,
+  "authorId": {
+    "$oid": "6755b59b0bf491e6aaf89967"
+  },
+  "coverImageUrl": "images/image-1733670411673-623824938.webp",
+  "publishedDate": {
+    "$date": "2024-08-03T21:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-08T15:06:51.677Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-08T15:06:51.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6755f6a507076f2c8dfa5298"
+  },
+  "title": "breakin bad season3",
+  "isbn": "112233",
+  "genre": "drama action",
+  "numberOfAvailableCopies": 2,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 14,
+  "isOpenToReviews": false,
+  "minAge": 0,
+  "authorId": {
+    "$oid": "6755b59b0bf491e6aaf89967"
+  },
+  "coverImageUrl": "images/image-1733692582609-122497270.png",
+  "publishedDate": {
+    "$date": "2024-08-03T21:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-08T19:42:29.938Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-08T19:42:29.938Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67577408e0ecb1c29a3b2392"
+  },
+  "title": {
+    "en": "breakin bad season5",
+    "ar": "غاتسبي العظيم"
+  },
+  "isbn": "112233255",
+  "genre": "drama action",
+  "numberOfAvailableCopies": 2,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 14,
+  "isOpenToReviews": false,
+  "minAge": 0,
+  "authorId": {
+    "$oid": "6755b59b0bf491e6aaf89967"
+  },
+  "coverImageUrl": "images/image-1733784584160-185557594.webp",
+  "publishedDate": {
+    "$date": "2024-08-03T21:00:00.000Z"
+  },
+  "isPublished": false,
+  "createdAt": {
+    "$date": "2024-12-09T22:49:44.166Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-09T22:49:44.166Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67577456e0ecb1c29a3b2399"
+  },
+  "title": {
+    "en": "prison break",
+    "ar": "غاتسبي العظيم"
+  },
+  "isbn": "00112233445",
+  "genre": "action",
+  "description": {
+    "en": "A classic novel set in the 1920s"
+  },
+  "numberOfAvailableCopies": 11,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 14,
+  "isOpenToReviews": false,
+  "minAge": 0,
+  "authorId": {
+    "$oid": "6755b59b0bf491e6aaf89967"
+  },
+  "coverImageUrl": "images/image-1733784662708-939747309.webp",
+  "publishedDate": {
+    "$date": "2024-08-03T21:00:00.000Z"
+  },
+  "isPublished": true,
+  "createdAt": {
+    "$date": "2024-12-09T22:51:02.709Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-09T22:51:02.709Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675a1849c4b2b95b63a792ae"
+  },
+  "title": {
+    "en": "new book",
+    "ar": "غاتسبي العظيم"
+  },
+  "isbn": "001122334452",
+  "genre": "action",
+  "description": {
+    "en": "A classic novel set in the 1920s",
+    "ar": "غاتسبي العظي"
+  },
+  "numberOfAvailableCopies": 11,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 14,
+  "isOpenToReviews": false,
+  "minAge": 0,
+  "authorId": {
+    "$oid": "67599decbf2c7db73b0582e1"
+  },
+  "coverImageUrl": "images/image-1733957705565-568882539.png",
+  "publishedDate": {
+    "$date": "2024-08-03T21:00:00.000Z"
+  },
+  "isPublished": false,
+  "createdAt": {
+    "$date": "2024-12-11T22:55:05.569Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-11T22:55:05.569Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675a18c0c4b2b95b63a792b2"
+  },
+  "title": {
+    "en": "new book2",
+    "ar": "غاتسبي العظيم"
+  },
+  "isbn": "0011223344523",
+  "genre": "action",
+  "description": {
+    "en": "A classic novel set in the 1920s",
+    "ar": "غاتسبي العظي"
+  },
+  "numberOfAvailableCopies": 4,
+  "isBorrowable": true,
+  "numberOfBorrowableDays": 14,
+  "isOpenToReviews": false,
+  "minAge": 14,
+  "authorId": {
+    "$oid": "67599decbf2c7db73b0582e1"
+  },
+  "coverImageUrl": "images/image-1733957824126-611184316.png",
+  "publishedDate": {
+    "$date": "2024-08-03T21:00:00.000Z"
+  },
+  "isPublished": false,
+  "createdAt": {
+    "$date": "2024-12-11T22:57:04.129Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-11T22:57:04.129Z"
+  },
+  "__v": 0
+}]

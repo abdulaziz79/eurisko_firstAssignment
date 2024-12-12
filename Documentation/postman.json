@@ -1,0 +1,697 @@
+{
+	"info": {
+		"_postman_id": "685f2e8c-34ff-4e1b-a53f-0264412779c5",
+		"name": "eurisko assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29991420"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "createBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title.en",
+									"value": "new book2",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "0011223344523",
+									"type": "text"
+								},
+								{
+									"key": "genre",
+									"value": "action",
+									"type": "text"
+								},
+								{
+									"key": "numberOfAvailableCopies",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "authorId",
+									"value": "67599decbf2c7db73b0582e1",
+									"type": "text"
+								},
+								{
+									"key": "coverImageUrl",
+									"type": "file",
+									"src": "/home/abdulaziz/Pictures/Screenshot from 2024-04-29 01-54-16.png"
+								},
+								{
+									"key": "publishedDate",
+									"value": "8-4-2024",
+									"type": "text"
+								},
+								{
+									"key": "title.ar",
+									"value": "غاتسبي العظيم",
+									"type": "text"
+								},
+								{
+									"key": "description.en",
+									"value": "A classic novel set in the 1920s",
+									"type": "text"
+								},
+								{
+									"key": "description.ar",
+									"value": "غاتسبي العظي",
+									"type": "text"
+								},
+								{
+									"key": "minAge",
+									"value": "14",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/book/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"book",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBook",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title.en",
+									"value": "new book",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "112233255",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "genre",
+									"value": "drama action",
+									"type": "text"
+								},
+								{
+									"key": "numberOfAvailableCopies",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "coverImageUrl",
+									"type": "file",
+									"src": "/home/abdulaziz/Pictures/Screenshot from 2024-06-05 10-21-17.png",
+									"disabled": true
+								},
+								{
+									"key": "authorId",
+									"value": "6755b59b0bf491e6aaf89967",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "isPublished",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/book/update/67599decbf2c7db73b0582e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"book",
+								"update",
+								"67599decbf2c7db73b0582e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/book/getAll?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"book",
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "togglePublish",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/book/67577456e0ecb1c29a3b2399/toggle-publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"book",
+								"67577456e0ecb1c29a3b2399",
+								"toggle-publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/book/getById/675a18c0c4b2b95b63a792b2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"book",
+								"getById",
+								"675a18c0c4b2b95b63a792b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookByIdWeb",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/book/getByIdWeb/67577456e0ecb1c29a3b2399?language=ar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"book",
+								"getByIdWeb",
+								"67577456e0ecb1c29a3b2399"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "ar"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "publishedBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/book/getPublishedBooks?page=1&limit=10&language=ar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"book",
+								"getPublishedBooks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "language",
+									"value": "ar"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "createAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name.en",
+									"value": "abdulaziz",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "aboudecharkawi@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "biography.en",
+									"value": ".........",
+									"type": "text"
+								},
+								{
+									"key": "profileImageUrl",
+									"type": "file",
+									"src": "/home/abdulaziz/Downloads/WhatsApp Image 2023-10-11 at 10.01.56 AM.jpeg"
+								},
+								{
+									"key": "name.ar",
+									"value": "whatever",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/author/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"author",
+								"create"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "abdelaziz",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "aboudecharkawi@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "biography",
+									"value": "........",
+									"disabled": true
+								},
+								{
+									"key": "profileImageUrl",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAuthorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/author/getById/67599decbf2c7db73b0582e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"author",
+								"getById",
+								"67599decbf2c7db73b0582e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAuthor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name.en",
+									"value": "aziz",
+									"type": "text"
+								},
+								{
+									"key": "biography.en",
+									"value": "whateverr",
+									"type": "text"
+								},
+								{
+									"key": "profileImageUrl",
+									"type": "file",
+									"src": "/home/abdulaziz/Pictures/360_F_865718660_lHuKgtcfW168QAAN7H2TypJ8PUxc0nuL.jpg"
+								},
+								{
+									"key": "name.ar",
+									"value": "abed",
+									"type": "text"
+								},
+								{
+									"key": "biography.ar",
+									"value": "new",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/author/update/6758204ca1b4df9142762788",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"author",
+								"update",
+								"6758204ca1b4df9142762788"
+							],
+							"query": [
+								{
+									"key": "name.en",
+									"value": "aziz",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "biography.en",
+									"value": "whatever",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAuthor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/author/delete/6755b59b0bf491e6aaf89967",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"author",
+								"delete",
+								"6755b59b0bf491e6aaf89967"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAuthorByIdLang",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/member/update/6758204ca1b4df9142762788",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"member",
+								"update",
+								"6758204ca1b4df9142762788"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBorrowedBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/member/getBorrowedBooks/67570e9276c2eef4f210e56a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"member",
+								"getBorrowedBooks",
+								"67570e9276c2eef4f210e56a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "createMember",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"abdulaziz\",\n    \"email\":\"cherkawiabdelazizzz@gmail.com\",\n    \"username\":\"cherkawi8\",\n    \"birthDate\":\"2012-5-2\",\n    \"subscribedBooks\":[\"6755f6a507076f2c8dfa5298\",\"6755b60b3d38597d9981a45b\"],\n    \"borrowedBooks\": [\n    {\n      \"borrowedBookId\": \"6755f6a507076f2c8dfa5298\",\n      \"returnDate\": \"2024-12-15\"\n    }\n  ]\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/member/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"member",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMembers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/member/getMembers?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"member",
+								"getMembers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMember",
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe-unsubscribe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"memberId\":\"675a1f2f107c1b9e1614f1b8\",\n    \"bookId\":\"675a18c0c4b2b95b63a792b2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/member/subscribe-or-unsubscribe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"member",
+								"subscribe-or-unsubscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return-a-book",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"memberId\":\"67570e9276c2eef4f210e56a\",\n    \"bookId\":\"675a18c0c4b2b95b63a792b2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/member/return",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"member",
+								"return"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrowBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"memberId\":\"67570e9276c2eef4f210e56a\",\n    \"bookId\":\"675a18c0c4b2b95b63a792b2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/member/borrow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"member",
+								"borrow"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -9,6 +9,8 @@ memberRoute.patch('/update/:id',MemberController.updateMember)
 memberRoute.post('/borrow', MemberController.borrowBook)
 memberRoute.post('/subscribe-or-unsubscribe', MemberController.subscribeOrUnsubscribe);
 memberRoute.get('/getBorrowedBooks/:id',MemberController.getBorrowedBooks)
+memberRoute.patch('/return', MemberController.returnBook);
+
 
 
 

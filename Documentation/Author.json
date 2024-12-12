@@ -1,0 +1,43 @@
+[{
+    "_id": {
+      "$oid": "6758204ca1b4df9142762788"
+    },
+    "name": {
+      "en": "aziz",
+      "ar": "abed"
+    },
+    "email": "aboudecharkawiii@gmail.com",
+    "biography": {
+      "en": "whateverr",
+      "ar": "new"
+    },
+    "profileImageUrl": "images/image-1733833290657-67080804.jpg",
+    "createdAt": {
+      "$date": "2024-12-10T11:04:44.775Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-10T11:04:44.775Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67599decbf2c7db73b0582e1"
+    },
+    "name": {
+      "en": "abdulaziz",
+      "ar": "whatever"
+    },
+    "email": "aboudecharkawi@gmail.com",
+    "biography": {
+      "en": "........."
+    },
+    "profileImageUrl": "images/image-1733926380964-519484491.jpeg",
+    "createdAt": {
+      "$date": "2024-12-11T14:13:00.972Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-11T14:13:00.972Z"
+    },
+    "__v": 0
+  }]
